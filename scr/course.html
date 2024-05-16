@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styleVariables.css" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #efefef;
+      }
+      .slide-content {
+        margin: 0 40px;
+      }
+      .slide-card {
+        width: 300px;
+        border-radius: 25px;
+        background-color: #fff;
+      }
+
+      .image-content,
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
+      }
+
+      .image-content {
+        position: relative;
+        row-gap: 5px;
+      }
+
+      .overplay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--background-blue);
+      }
+      .card-image {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background: #fff;
+        padding: 3px;
+      }
+
+      .card-image .card-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid var(--background-blue);
+      }
+
+      .name {
+        font-size: 18px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .description {
+        font-size: 14px;
+        color: #707070;
+        text-align: center;
+      }
+      .slide-btn {
+        border: none;
+        font-size: 16px;
+        color: #fff;
+        padding: 8px 16px;
+        background-color: var(--background-blue);
+        border-radius: 4px;
+        margin: 14px;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+      }
+      .slide-btn:hover {
+        background-color: rgb(19, 141, 217);
+      }
+      /* card */
+      .card {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin-bottom: 2rem;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.25rem;
+        background-color: rgba(17, 24, 39, 1);
+        padding: 1.5rem;
+      }
+
+      .header {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .price {
+        font-size: 3.75rem;
+        line-height: 1;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .desc {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.625;
+        color: rgba(156, 163, 175, 1);
+      }
+
+      .lists {
+        margin-bottom: 1.5rem;
+        flex: 1 1 0%;
+        color: rgba(156, 163, 175, 1);
+      }
+
+      .lists .list {
+        margin-bottom: 0.5rem;
+        display: flex;
+        margin-left: 0.5rem;
+      }
+
+      .lists .list img {
+        height: 1.5rem;
+        width: 1.5rem;
+        flex-shrink: 0;
+        margin-right: 0.5rem;
+        color: rgba(167, 139, 250, 1);
+      }
+
+      .action {
+        border: none;
+        outline: none;
+        display: inline-block;
+        border-radius: 0.25rem;
+        background-color: rgba(167, 139, 250, 1);
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        color: rgba(17, 24, 39, 1);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="slide-container">
+      <div class="slide-content">
+        <div class="slide-wrapper">
+          <div class="slide-card">
+            <div class="image-content">
+              <span class="overplay"> </span>
+
+              <div class="card-image">
+                <img src="/images/developers.jpg" alt="" class="card-img" />
+              </div>
+              <div class="card-content">
+                <h2 class="name">JavaScript</h2>
+                <p class="description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Asperiores, ducimus.
+                </p>
+                <button class="slide-btn">View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="card">
+      <div class="header">
+        <span class="title">Beginner</span>
+        <span class="price">Free</span>
+      </div>
+      <p class="desc">Etiam ac convallis enim, eget euismod dolor.</p>
+      <ul class="lists">
+        <li class="list">
+          <img src="/images/check.png" alt="check" class="check" />
+          <span>Aenean quis</span>
+        </li>
+        <li class="list">
+          <img src="/images/check.png" alt="check" class="check" />
+          <span>Aenean quis</span>
+        </li>
+        <li class="list">
+          <img src="/images/check.png" alt="check" class="check" />
+          <span>Aenean quis</span>
+        </li>
+        <li class="list">
+          <img src="/images/check.png" alt="check" class="check" />
+          <span>Aenean quis</span>
+        </li>
+      </ul>
+      <button type="button" class="action">Get Started</button>
+    </div>
+  </body>
+</html>

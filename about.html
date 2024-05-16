@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Faba Fasti Traore" />
+    <!-- variables  styles  -->
+    <link rel="stylesheet" href="css/styleVariables.css" />
+    <!-- navigation style & js -->
+    <link rel="stylesheet" href="/css/nav.css" />
+    <script src="/js/nav.js" defer></script>
+
+    <!-- main body css -->
+    <link rel="stylesheet" href="/css/content.css" />
+    <!-- main body css -->
+    <link rel="stylesheet" href="/css/about.css" />
+    <script src="/js/about.js"></script>
+    <title>About page</title>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <div class="top-nav" id="my-topnav">
+      <a href="home.html" id="active">Home</a>
+      <div class="dropdown">
+        <button class="drop-btn">
+          Course
+          <i class="fab ba-caret-down"></i>
+        </button>
+        <div class="drop-content">
+          <a href="htmlCourse.html">HTML</a>
+          <a href="cssCourse.html">CSS</a>
+          <a href="jscourse.html">JavaScript</a>
+        </div>
+      </div>
+      <a href="videos.html">Video</a>
+      <a href="about.html">About</a>
+      <a
+        href="javascript:void(0);"
+        style="font-size: 15px"
+        class="icon"
+        onclick="myFunction()"
+        >&#9776;</a
+      >
+    </div>
+    <!-- toggle -->
+    <div class="toggle">
+      <div class="btn-container">
+        <svg
+          viewBox="0 0 16 16"
+          class="bi bi-sun-fill"
+          fill="currentColor"
+          width="23"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+            color="red"
+          ></path>
+        </svg>
+        <label class="switch btn-color-mode-switch">
+          <input value="1" id="color_mode" name="color_mode" type="checkbox" />
+          <label
+            class="btn-color-mode-switch-inner"
+            data-off="Dark "
+            data-on="Light"
+            for="color_mode"
+          ></label>
+        </label>
+        <svg
+          viewBox="0 0 16 16"
+          class="bi bi-moon-stars-fill"
+          fill="currentColor"
+          width="23"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+            color="orange"
+          ></path>
+          <path
+            d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+            color="black"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- header -->
+    <header>
+      <p id="date" class=""></p>
+      <!-- about section -->
+    </header>
+
+    <!-- maind body -->
+    <main id="main">
+      <!-- about us  -->
+      <article class="aboutUs">
+        <section class="header">
+          <h1>About Us</h1>
+          <p>Empowering You Through Code: Our Mission and Vision</p>
+        </section>
+      </article>
+      <section class="ourVision">
+        <div>
+          <h2>out Vision</h2>
+        </div>
+        <div>
+          <p>
+            Join our community of learners and discover the joy of coding with
+            MasterCode. Together, let's build a brighter future through code!
+          </p>
+        </div>
+      </section>
+      <section class="mission">
+        <div class="mission-heading">
+          <h2>our mission</h2>
+        </div>
+        <div class="mission-p">
+          <p>
+            At MasterCode, we believe in the transformative power of coding. Our
+            mission is to empower individuals like you to unlock the limitless
+            possibilities of technology through coding education.
+          </p>
+          <p>
+            Whether you're a beginner taking your first steps into the world of
+            programming or an experienced developer looking to enhance your
+            skills, we're here to guide you on your journey.
+          </p>
+        </div>
+      </section>
+
+      <section class="ourValue">
+        <div>
+          <h2>our value</h2>
+        </div>
+        <div>
+          <p>
+            Our team of dedicated instructors brings years of industry
+            experience and a passion for teaching to every lesson. We offer a
+            comprehensive range of courses, covering everything from the basics
+            of HTML and CSS to advanced topics like JavaScript frameworks and
+            full-stack development. With our hands-on approach and interactive
+            learning platform, you'll gain the practical skills and confidence
+            you need to succeed in today's tech-driven world.
+          </p>
+        </div>
+      </section>
+      <h2 class="meet-staff">Meet our staff</h2>
+      <section class="staff-card">
+        <!-- include card for staff with name and  profesion -->
+        <section class="staff-card">
+          <div class="staff-member">
+            <div class="background-image"></div>
+            <div class="content">
+              <h2>Faba Traore</h2>
+              <p>Web Developer</p>
+            </div>
+          </div>
+          <div class="staff-member">
+            <div class="background-image"></div>
+            <div class="content">
+              <h2>Faba Traore</h2>
+              <p>Web Developer</p>
+            </div>
+          </div>
+
+          <div class="staff-member">
+            <div class="background-image"></div>
+            <div class="content">
+              <h2>Faba Traore</h2>
+              <p>Web Developer</p>
+            </div>
+          </div>
+
+          <div class="staff-member">
+            <div class="background-image"></div>
+            <div class="content">
+              <h2>Faba Traore</h2>
+              <p>Web Developer</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- testimony -->
+      <h2 class="review-h2">Our Happy Clients</h2>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, atque?
+        Repudiandae possimus asperiores hic nemo id a molestiae minus impedit!
+      </p>
+
+      <!-- Clients Review Section -->
+      <div class="reviewSection">
+        <!-- Clients Review-1 Section Starts from Here  -->
+        <div class="reviewItem">
+          <div class="top">
+            <div class="clientImage">
+              <img src="./client.png" alt="" />
+              <span>Maram Traore</span>
+            </div>
+            <ul>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-regular fa-star"></i></li>
+              <li><i class="fa-regular fa-star"></i></li>
+            </ul>
+          </div>
+          <article>
+            <p class="review">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+              beatae ipsa voluptatibus perferendis quos eaque nemo error tempora
+              harum quas, laudantium tenetur, neque, facere exercitationem!
+            </p>
+            <p>Jan 23, 2024</p>
+          </article>
+        </div>
+
+        <!-- Clients Review-2 Section Starts from Here  -->
+        <div class="reviewItem">
+          <div class="top">
+            <div class="clientImage">
+              <img
+                src="https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?q=80&w=1944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+              />
+              <span>Laye Keita</span>
+            </div>
+            <ul>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-regular fa-star"></i></li>
+              <li><i class="fa-regular fa-star"></i></li>
+            </ul>
+          </div>
+          <article>
+            <p class="review">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+              beatae ipsa voluptatibus perferendis quos eaque nemo error tempora
+              harum quas, laudantium tenetur, neque, facere exercitationem!
+            </p>
+            <p>Feb 25, 2024</p>
+          </article>
+        </div>
+
+        <!-- Clients Review-3 Section Starts from Here  -->
+        <div class="reviewItem">
+          <div class="top">
+            <div class="clientImage">
+              <img src="./client.png" alt="" />
+              <span>Adam Traore</span>
+            </div>
+            <ul>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-regular fa-star"></i></li>
+              <li><i class="fa-regular fa-star"></i></li>
+            </ul>
+          </div>
+          <article>
+            <p class="review">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+              beatae ipsa voluptatibus perferendis quos eaque nemo error tempora
+              harum quas, laudantium tenetur, neque, facere exercitationem!
+            </p>
+            <p>Jan 01, 2023</p>
+          </article>
+        </div>
+        <div class="reviewItem">
+          <div class="top">
+            <div class="clientImage">
+              <img src="./client.png" alt="" />
+              <span>Adam Traore</span>
+            </div>
+            <ul>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-solid fa-star"></i></li>
+              <li><i class="fa-regular fa-star"></i></li>
+              <li><i class="fa-regular fa-star"></i></li>
+            </ul>
+          </div>
+          <article>
+            <p class="review">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+              beatae ipsa voluptatibus perferendis quos eaque nemo error tempora
+              harum quas, laudantium tenetur, neque, facere exercitationem!
+            </p>
+            <p>Jan 01, 2023</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- quote section -->
+      <!-- <article class="quotes">
+        <div class="slideshow-container">
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1516600517612-61f2e5eb9182?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Service 1"
+            />
+            <div class="caption">Service 1</div>
+          </div>
+
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1561693666-609d8bfdfa1f?q=80&w=1739&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Service 2"
+            />
+            <div class="caption">Service 2</div>
+          </div>
+         
+          <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+          <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+      </article> -->
+      <!-- contact from -->
+      <hr />
+      <div class="contact-text">
+        <h2>Let's Connect!</h2>
+        <p class="">
+          Feel free to reach out to us with any questions, inquiries, or
+          feedback you may have. We're here to help!
+        </p>
+      </div>
+
+      <div class="form-container">
+        <form class="form">
+          <div class="flex">
+            <label>
+              <input required="" placeholder="" type="text" class="input" />
+              <span>first name</span>
+            </label>
+
+            <label>
+              <input required="" placeholder="" type="text" class="input" />
+              <span>last name</span>
+            </label>
+          </div>
+
+          <label>
+            <input required="" placeholder="" type="email" class="input" />
+            <span>email</span>
+          </label>
+
+          <label>
+            <input required="" type="tel" placeholder="" class="input" />
+            <span>contact number</span>
+          </label>
+          <label>
+            <textarea
+              required=""
+              rows="3"
+              placeholder=""
+              class="input01"
+            ></textarea>
+            <span>message</span>
+          </label>
+
+          <button class="fancy" href="#">
+            <span class="top-key"></span>
+            <span class="text">submit</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+          </button>
+        </form>
+        <div class="contact-details">
+          <p class="title">contact us</p>
+          <p>
+            <span id="message"> <i class="fas fa-envelope"></i></span
+            >info@getintouch.uk
+          </p>
+          <p>
+            <span id="phone"><i class="fas fa-clock"></i></span>01234-234-543
+          </p>
+          <p>
+            <span id="home"><i class="fas fa-building"></i></span>23 Nowhere st.
+          </p>
+          <p>
+            <span id="time"><i class="fas fa-phone-alt"></i></span>23 Nowhere
+            st.
+          </p>
+        </div>
+      </div>
+    </main>
+    <!-- map -->
+    <div class="map">
+      <h2>find US</h2>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9796.247323979334!2d-0.4781609439782709!3d52.13319675139325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877b6c5c58b8029%3A0xb3bb616b53ce6739!2sBedford%20College!5e0!3m2!1sen!2suk!4v1714218979904!5m2!1sen!2suk"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Solutions</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Exercises</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Documentation</h4>
+            <ul>
+              <li><a href="#">Get Centre</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Policy</a></li>
+              <li><a href="#">Career</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Social media</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

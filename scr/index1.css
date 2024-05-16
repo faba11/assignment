@@ -1,0 +1,40 @@
+.styled-code {
+  background-color: #1e1e1e;
+  padding: 5px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.styled-code code {
+  display: block;
+  white-space: pre-wrap;
+}
+
+.function {
+  color: #795548; /* Function color */
+}
+
+.function-name {
+  color: #2196f3; /* Function name color */
+}
+
+.parameter {
+  color: #00796b;
+}
+
+.value {
+  color: #388e3c;
+}
+
+.array {
+  color: #2196f3;
+}
+
+.variable {
+  color: #2196f3;
+}
+
+.method {
+  color: #fbc02d;
+}
+

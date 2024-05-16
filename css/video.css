@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.my-nav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.my-nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.my-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.my-nav a.active {
+  background-color: #020605;
+  color: white;
+}
+
+.mapContainer {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(73, 98, 98);
+  width: 100%;
+  height: auto;
+}
+iframe {
+  margin-left: 25%;
+}
+h1 {
+  font-weight: bold;
+  text-align: center;
+}
+hr {
+  margin: 10px;
+}
+.contact {
+  background-color: rgb(228, 215, 215);
+  margin: 15px;
+  padding: 10px;
+  letter-spacing: 0ic;
+  font-size: large;
+}
+footer {
+  text-align: center;
+  margin: 15px;
+  font-size: larger;
+  background-color: grey;
+  padding: 20px;
+}

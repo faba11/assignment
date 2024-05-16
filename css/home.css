@@ -1,0 +1,551 @@
+/* 
+  This code sets the padding of the body element to 120px on the left and right sides.
+  This is a fairly large padding, which will make the content of the page quite narrow.
+*/
+body {
+  padding: 0 120px;
+  box-sizing: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  overflow-x: hidden;
+}
+/* 
+  Then, we use a media query to apply different styles when the screen is smaller than 1100px.
+  In this case, we reduce the padding to 10px, which will make the content wider again.
+  This is useful for smaller screens, such as mobile devices, where the user may not have as much space to view the content.
+*/
+@media screen and (max-width: 1100px) {
+  body {
+    padding: 0 10px;
+  }
+}
+
+main {
+  margin: 0 auto;
+}
+
+/* container for the welcome page */
+.welcomePage {
+  display: flex; /* make it a flex container so the two elements inside it can be positioned relative to each other */
+  width: 100%; /* make it as wide as the parent */
+  max-width: 100%; /* make it as wide as the parent */
+  min-height: 200px; /* make it at least 200px high */
+  margin: 40px auto;
+  padding: 0;
+}
+
+/* left side of the welcome page */
+.left-welcome {
+  background: url("/images/developers.jpg") no-repeat; /* set the background image */
+  background-position: center; /* center the background image */
+  background-size: cover; /* make the background image as big as the container */
+  flex: 1; /* make the left side take up half of the space */
+  float: left; /* float it to the left */
+  height: 300px;
+}
+
+/* right side of the welcome page */
+.right-welcome {
+  display: grid; /* make it a grid container so we can center the elements inside it */
+  place-items: center; /* center the elements inside the grid */
+  flex: 1; /* make the right side take up half of the space */
+  float: right; /* float it to the right */
+  margin: 15px;
+  height: auto; /* make it as high as it needs to be */
+}
+.right-welcome h1 {
+  max-width: 700px; /* make the h1 tag no wider than 700px */
+  font-size: 50px;
+  margin: 0;
+  text-align: center;
+}
+.right-welcome button a {
+  text-decoration: none;
+  color: var(--background-orange);
+}
+.right-welcome button {
+  background-color: transparent;
+
+  padding: 20px 20px;
+  margin: 10px 0;
+  border: 4px solid var(--background-blue);
+  border-radius: 5px; /* make the button slightly rounded */
+  cursor: pointer; /* make the button clickable */
+  font-size: 30px;
+  transition: all 0.4s ease-in; /* add a transition to the opacity of the button */
+}
+
+.right-welcome button:hover {
+  background-color: var(--background-blue);
+}
+@media screen and (max-width: 890px) {
+  /* media query to change the layout when the screen is smaller than 890px */
+  .welcomePage {
+    display: block; /* make the welcome page a block element */
+    margin-top: 60px;
+  }
+  .left-welcome,
+  .right-welcome {
+    float: none; /* make the left and right side not float */
+  }
+}
+/* end of welcome page */
+
+/* video container */
+.video-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 200px;
+  margin-top: 0;
+}
+
+.video-container h2 {
+  width: 600px;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+.video-container .video-caption {
+  top: 400px;
+  width: 100%;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.video-caption p {
+  font-size: 30px;
+  color: red;
+}
+/* responsive for video-caption text */
+@media screen and (max-width: 900px) {
+  .video-container .video-caption {
+    height: 250px;
+  }
+}
+
+.video-caption p {
+  color: var(--background-White);
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.video-caption button {
+  background-color: transparent;
+  color: var(--background-White);
+  margin-bottom: 80px;
+  padding: 30px;
+  font-size: 18px;
+  border: 1px solid var(--background-White);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+}
+
+.video-caption button a {
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+}
+
+.video-caption button:hover {
+  background-color: var(--background-blue);
+  border: var(--background-black);
+}
+
+/* projects  container */
+.projects-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 200px auto;
+  gap: 1.5rem;
+  margin-top: 3px;
+  margin-bottom: 60px;
+}
+
+#projects {
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 100px auto;
+}
+
+#projects::before {
+  content: "Oncoming projects";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: var(--background-orange);
+  color: white;
+  bottom: -10px;
+  left: 0;
+  top: 50px;
+}
+
+#projects::after {
+  content: "upcoming projects";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: var(--background-blue);
+  bottom: 0;
+  right: 0;
+  color: white;
+  top: 50px;
+}
+.info img {
+  display: block;
+  width: 100%;
+}
+
+.info h2 {
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.info {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: 1/4;
+}
+@media screen and (max-width: 1000px) {
+  .info {
+    display: block;
+  }
+}
+
+/* slide show */
+.slide-content {
+  margin: 0 40px;
+}
+.slide-card {
+  width: 300px;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  border: 4px solid var(--background-blue);
+  object-fit: cover;
+}
+/* image container */
+/* 
+ * The following CSS code block is responsible for styling the image container, the header button, and the header text.
+ * It uses absolute positioning to place the header button on top of the image, and relative positioning to place the header text on top of the image.
+ * The image container is given a max-width of 100% and is centered horizontally with margin: 100px auto 0;
+ * The header button is positioned absolutely on top of the image, with its top edge 45% from the bottom of the image.
+ * The header button is given a width of 100% and is centered horizontally with text-align: center;
+ * The header button is also given a padding of 20px to make it easier to click.
+ * The header button is given a background color of var(--background) and a text color of var(--color) to make it match the theme of the website.
+ * The header button is given a transition of opacity 0.4s to make it fade in and out smoothly when hovered over.
+ * The header text is given a padding of 0 400px to make it centered horizontally.
+ * The header text is also given a margin of 20px 0 to make it centered vertically.
+ * The header text is given a text-align of justify to make it centered horizontally.
+ * The image container is given a height of 350px to make it fit with the image.
+ * The image container is also given a background size of cover to make the image cover the entire container.
+ * The image container is given a background position of center to make the image centered horizontally.
+ */
+.image-container {
+  background-image: url("/images/developers.jpg");
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  margin: 100px auto 0;
+  position: relative;
+  height: 350px;
+}
+
+/* The header button is positioned on top of the image */
+.headerBtn {
+  position: absolute;
+  width: 100%;
+  top: calc(100% - 45%);
+  text-align: center;
+}
+
+/* The header button is given a padding and a font size to make it easier to click */
+.headerBtn p {
+  color: var(--background-White);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+/* The header button is given a background color and a text color to make it match the theme of the website */
+.headerBtn button {
+  position: relative;
+  background-color: var(--background-blue);
+  color: var(--background-White);
+  margin-bottom: 30px 0;
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.4s;
+}
+
+/* The header button is given a transition to make it fade in and out smoothly when hovered over */
+.headerBtn button:hover {
+  opacity: var(--opacity);
+}
+
+/* The header text is given a padding and a margin to make it centered horizontally and vertically */
+.header-text {
+  text-align: justify;
+  padding: 0 400px;
+  margin: 20px 0;
+}
+
+/* The image container is given a height of 540px to make it fit with the image when the screen is smaller than 1100px */
+@media screen and (max-width: 1100px) {
+  .image-container {
+    height: 540px;
+  }
+}
+
+/* auto typing */
+.auto-typing {
+  margin: 90px 0;
+}
+.header-text {
+  position: relative;
+  background-color: var(--background-black);
+  text-align: center;
+  margin: 40px 0;
+  padding: 50px 0;
+}
+
+/* .header-text::before {
+  position: absolute;
+  content: "";
+  width: 90px;
+  height: 100%;
+  background-color: var(--background-orange);
+  top: 0;
+  left: 0;
+}
+
+.header-text::after {
+  position: absolute;
+  content: "";
+  width: 90px;
+  height: 100%;
+  background-color: var(--background-orange);
+  top: 0;
+  right: 0;
+} */
+
+.header-text a {
+  text-decoration: none;
+  font-size: 30px;
+  color: var(--background-White);
+}
+
+/* CARD */
+.course-container {
+  margin: 30px auto;
+}
+.course-container .course-title {
+  width: 440px;
+  position: relative;
+  font-size: 70px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 30px auto;
+}
+
+.course-container .course-title::after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: red;
+}
+.course-container .course {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.course .card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 0px 10px;
+  width: 320px;
+  height: 490px;
+  flex-direction: column;
+  border-radius: 0.25rem;
+  background-color: rgba(17, 24, 39, 1);
+  padding: 1.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .course .card {
+    margin: 7px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2rem;
+  font-weight: 700;
+  background-color: orangered;
+  color: var(--background-White);
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+}
+
+.desc {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.625;
+  color: rgba(156, 163, 175, 1);
+}
+
+.lists {
+  margin-bottom: 1.5rem;
+  flex: 1 1 0%;
+  color: rgba(156, 163, 175, 1);
+}
+
+.lists .list {
+  margin-bottom: 0.5rem;
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+.lists .list img {
+  height: 1.5rem;
+  width: 1.5rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  color: rgba(167, 139, 250, 1);
+}
+
+.action {
+  border: none;
+  outline: none;
+  display: inline-block;
+  border-radius: 0.25rem;
+  background-color: rgba(167, 139, 250, 1);
+  padding: 1rem 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(17, 24, 39, 1);
+  cursor: pointer;
+}
+
+/* .card-container {
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+  margin: 100px 0;
+}
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: #07182e;
+  position: relative;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 10px;
+  transition: hover 0.6s;
+}
+
+.card h2 {
+  z-index: 1;
+  color: var(--background-White);
+  font-size: 2em;
+}
+
+.card:hover::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(
+    180deg,
+    rgb(0, 183, 255),
+    rgb(255, 48, 255)
+  );
+  height: 230%;
+  animation: rotation 7s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.card::after {
+  content: "";
+  position: absolute;
+  background: #07182e;
+  inset: 5px;
+  border-radius: 15px;
+}
+.list {
+  position: relative;
+} */
