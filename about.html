@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Faba Fasti Traore" />
+    <!-- loading css styles -->
+    <link rel="stylesheet" href="css/loading.css">
+    <!-- loading js -->
+    <script defer src="/js/loading.js" ></script>
     <!-- variables  styles  -->
     <link rel="stylesheet" href="css/styleVariables.css" />
     <!-- navigation style & js -->
@@ -43,7 +47,7 @@
       >
     </div>
     <!-- toggle -->
-    <div class="toggle">
+    <div id="hidden" class="toggle">
       <div class="btn-container">
         <svg
           viewBox="0 0 16 16"
@@ -85,22 +89,16 @@
       </div>
     </div>
 
-    <!-- header -->
-    <header>
-      <p id="date" class=""></p>
-      <!-- about section -->
-    </header>
-
     <!-- maind body -->
     <main id="main">
       <!-- about us  -->
-      <article class="aboutUs">
+      <article id="hidden" class="aboutUs">
         <section class="header">
           <h1>About Us</h1>
           <p>Empowering You Through Code: Our Mission and Vision</p>
         </section>
       </article>
-      <section class="ourVision">
+      <section id="hidden"  class="ourVision">
         <div>
           <h2>out Vision</h2>
         </div>
@@ -111,7 +109,7 @@
           </p>
         </div>
       </section>
-      <section class="mission">
+      <section id="hidden" class="mission">
         <div class="mission-heading">
           <h2>our mission</h2>
         </div>
@@ -129,7 +127,7 @@
         </div>
       </section>
 
-      <section class="ourValue">
+      <section id="hidden" class="ourValue">
         <div>
           <h2>our value</h2>
         </div>
@@ -145,10 +143,10 @@
           </p>
         </div>
       </section>
-      <h2 class="meet-staff">Meet our staff</h2>
+      <h2 id="hidden" class="meet-staff">Meet our staff</h2>
       <section class="staff-card">
         <!-- include card for staff with name and  profesion -->
-        <section class="staff-card">
+        <section id="hidden" class="staff-card">
           <div class="staff-member">
             <div class="background-image"></div>
             <div class="content">
@@ -183,14 +181,16 @@
       </section>
 
       <!-- testimony -->
-      <h2 class="review-h2">Our Happy Clients</h2>
+      <div id="hidden">
+           <h2 class="review-h2">Our Happy Clients</h2>
       <p class="description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, atque?
         Repudiandae possimus asperiores hic nemo id a molestiae minus impedit!
       </p>
-
+      </div>
+   
       <!-- Clients Review Section -->
-      <div class="reviewSection">
+      <div id="hidden" class="reviewSection">
         <!-- Clients Review-1 Section Starts from Here  -->
         <div class="reviewItem">
           <div class="top">
@@ -292,33 +292,9 @@
           </article>
         </div>
       </div>
-
-      <!-- quote section -->
-      <!-- <article class="quotes">
-        <div class="slideshow-container">
-          <div class="slide">
-            <img
-              src="https://images.unsplash.com/photo-1516600517612-61f2e5eb9182?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Service 1"
-            />
-            <div class="caption">Service 1</div>
-          </div>
-
-          <div class="slide">
-            <img
-              src="https://images.unsplash.com/photo-1561693666-609d8bfdfa1f?q=80&w=1739&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Service 2"
-            />
-            <div class="caption">Service 2</div>
-          </div>
-         
-          <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-          <a class="next" onclick="changeSlide(1)">&#10095;</a>
-        </div>
-      </article> -->
       <!-- contact from -->
       <hr />
-      <div class="contact-text">
+      <div id="hidden" class="contact-text">
         <h2>Let's Connect!</h2>
         <p class="">
           Feel free to reach out to us with any questions, inquiries, or
@@ -326,7 +302,7 @@
         </p>
       </div>
 
-      <div class="form-container">
+      <div id="hidden" class="form-container">
         <form class="form">
           <div class="flex">
             <label>
@@ -386,7 +362,7 @@
       </div>
     </main>
     <!-- map -->
-    <div class="map">
+    <div id="hidden" class="map">
       <h2>find US</h2>
       <div>
         <iframe
@@ -401,7 +377,7 @@
       </div>
     </div>
     <!-- footer -->
-    <footer class="footer">
+    <footer id="hidden" class="footer">
       <div class="footer-container">
         <div class="row">
           <div class="footer-col">
