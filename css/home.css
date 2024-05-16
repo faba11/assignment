@@ -7,6 +7,14 @@ body {
   box-sizing: 2px 2px 5px rgba(0, 0, 0, 0.3);
   overflow-x: hidden;
 }
+
+.toggle{
+  position: absolute;
+  right: 50px;
+
+}
+
+
 /* 
   Then, we use a media query to apply different styles when the screen is smaller than 1100px.
   In this case, we reduce the padding to 10px, which will make the content wider again.

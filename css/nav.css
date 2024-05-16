@@ -277,13 +277,6 @@ nav ul li a:hover {
   left: 20px;
 }
 
-.toggle {
-  position: relative;
-  display: flex;
-  float: right;
-  margin-right: 180px;
-  margin-top: 15px;
-}
 
 .btn-color-mode-switch input[type="checkbox"]:checked ~ .alert {
   display: block;
@@ -301,11 +294,12 @@ nav ul li a:hover {
   width: 300px;
   display: table-cell;
   vertical-align: middle;
-  position: fixed;
+
   text-align: center;
   z-index: 1;
   /* margin-right: 60px; */
 }
+
 
 .btn-container i {
   display: inline-block;
@@ -350,7 +344,7 @@ label {
 .btn-color-mode-switch > label.btn-color-mode-switch-inner:after {
   content: attr(data-off);
   width: 70px;
-  height: 26px;
+  height: 16px;
   background: #fff;
   border-radius: 26px;
   position: absolute;

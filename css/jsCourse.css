@@ -1,17 +1,30 @@
-*,
+/* *,
 :after,
 :before {
   border: 0 solid #e5e7eb;
   box-sizing: border-box;
+} */
+
+.toggle{
+  margin-top: 30px;
+  margin-bottom: 0;
+  position: absolute;
+  right: 0;
+  position: fixed;
 }
 
-main {
-  padding: 20px;
+
+@media screen and (max-width:900px) {
+  .toggle{
+    position: sticky;
+    z-index: 1;
+  }
 }
+
 
 .layout {
   position: relative;
-  margin-top: 10px;
+  margin: 40px;
 }
 
 .leftCard {
@@ -40,11 +53,16 @@ main {
 }
 
 /* responsive */
-.toggle {
+/* .toggle {
   display: flex;
   margin-right: 0;
   justify-content: end;
-}
+} */
+/* 
+.btn-container{
+  width: 100%;
+  margin-bottom: 90px;
+} */
 @media screen and (max-width: 900px) {
   .leftCard,
   .rightCard {
@@ -58,19 +76,6 @@ main {
   }
   .rightCard {
     position: static;
-  }
-
-  /* toggle mode */
-  .toggle {
-    display: flex;
-    margin: 0;
-    justify-content: end;
-  }
-  .btn-container {
-    position: sticky;
-    text-align: left;
-    z-index: 1;
-    /* margin: 10px auto; */
   }
 }
 
@@ -349,7 +354,3 @@ pre.highlight:not(.language-bash) + .toolbar {
   margin: 10px;
   font-family: inherit;
 }
-
-/* .domMethods {
-  margin: 10px 0;
-} */
