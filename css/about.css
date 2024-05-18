@@ -1,8 +1,19 @@
 /* form */
 body {
-  height: 200vh;
+  /* height: 200vh; */
   scroll-behavior: smooth;
 }
+
+
+
+.toggle{
+  margin: 20px;
+  display: flex;
+  margin-right: 0px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
 :root {
   --background-blue: hsl(200, 100%, 50%);
   --background-black: hsl(221, 41%, 7%);

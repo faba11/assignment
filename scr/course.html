@@ -1,225 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/styleVariables.css" />
-    <title>Document</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      }
-      body {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #efefef;
-      }
-      .slide-content {
-        margin: 0 40px;
-      }
-      .slide-card {
-        width: 300px;
-        border-radius: 25px;
-        background-color: #fff;
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Example</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+}
 
-      .image-content,
-      .card-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 14px;
-      }
+footer {
+    background-color: #0a0b1a;
+    color: #ffffff;
+    padding: 40px 0;
+}
 
-      .image-content {
-        position: relative;
-        row-gap: 5px;
-      }
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-      .overplay {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--background-blue);
-      }
-      .card-image {
-        position: relative;
-        height: 150px;
-        width: 150px;
-        border-radius: 50%;
-        background: #fff;
-        padding: 3px;
-      }
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
 
-      .card-image .card-img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 4px solid var(--background-blue);
-      }
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
 
-      .name {
-        font-size: 18px;
-        font-weight: 500;
-        color: #333;
-      }
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
 
-      .description {
-        font-size: 14px;
-        color: #707070;
-        text-align: center;
-      }
-      .slide-btn {
-        border: none;
-        font-size: 16px;
-        color: #fff;
-        padding: 8px 16px;
-        background-color: var(--background-blue);
-        border-radius: 4px;
-        margin: 14px;
-        cursor: pointer;
-        transition: all 0.4s ease-in-out;
-      }
-      .slide-btn:hover {
-        background-color: rgb(19, 141, 217);
-      }
-      /* card */
-      .card {
-        margin-left: -1rem;
-        margin-right: -1rem;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        margin-bottom: 2rem;
-        width: 320px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 0.25rem;
-        background-color: rgba(17, 24, 39, 1);
-        padding: 1.5rem;
-      }
+.footer-section ul li {
+    margin-bottom: 10px;
+}
 
-      .header {
-        display: flex;
-        flex-direction: column;
-      }
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
 
-      .title {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        font-weight: 700;
-        color: #fff;
-      }
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
 
-      .price {
-        font-size: 3.75rem;
-        line-height: 1;
-        font-weight: 700;
-        color: #fff;
-      }
+.company-info p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
 
-      .desc {
-        margin-top: 0.75rem;
-        margin-bottom: 0.75rem;
-        line-height: 1.625;
-        color: rgba(156, 163, 175, 1);
-      }
+.social-media {
+    display: flex;
+    margin-top: 10px;
+}
 
-      .lists {
-        margin-bottom: 1.5rem;
-        flex: 1 1 0%;
-        color: rgba(156, 163, 175, 1);
-      }
+.social-media a {
+    margin-right: 10px;
+}
 
-      .lists .list {
-        margin-bottom: 0.5rem;
-        display: flex;
-        margin-left: 0.5rem;
-      }
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
 
-      .lists .list img {
-        height: 1.5rem;
-        width: 1.5rem;
-        flex-shrink: 0;
-        margin-right: 0.5rem;
-        color: rgba(167, 139, 250, 1);
-      }
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 1px solid #1a1a2e;
+    padding-top: 20px;
 
-      .action {
-        border: none;
-        outline: none;
-        display: inline-block;
-        border-radius: 0.25rem;
-        background-color: rgba(167, 139, 250, 1);
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-        text-align: center;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        color: rgba(17, 24, 39, 1);
-        cursor: pointer;
-      }
-    </style>
+    /* old */
+footer .footer-container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style-type: none;
+}
+.footer {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  margin-top: 0;
+  background-color: #000;
+  color: white;
+  padding: 10px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: orangered;
+  height: 2px;
+  width: 50px;
+  box-sizing: border-box;
+}
+
+.footer-col ul li:not(:first-child) {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  padding: 5px;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  padding-left: 15px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: var(--fg);
+  background-color: var(--bg);
+}
+/* responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+.tag {
+  cursor: pointer;
+  transition: opacity 0.5s, background-color 0.5s, color 0.5s;
+}
+.tag:hover {
+  opacity: 0.8;
+  background-color: azure;
+  color: #000;
+}
+}
+
+</style>
   </head>
-  <body>
-    <!-- <div class="slide-container">
-      <div class="slide-content">
-        <div class="slide-wrapper">
-          <div class="slide-card">
-            <div class="image-content">
-              <span class="overplay"> </span>
+<body>
+    <!-- Other content of the website -->
 
-              <div class="card-image">
-                <img src="/images/developers.jpg" alt="" class="card-img" />
-              </div>
-              <div class="card-content">
-                <h2 class="name">JavaScript</h2>
-                <p class="description">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Asperiores, ducimus.
-                </p>
-                <button class="slide-btn">View More</button>
-              </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section company-info">
+                <img src="logo.png" alt="Company Logo">
+                <p>Est error fugo modi error. Laborum cum nobis porro cupiditate et quo.</p>
+                <div class="social-media">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
-          </div>
+            <div class="footer-section solutions">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Commerce</a></li>
+                    <li><a href="#">Insights</a></li>
+                </ul>
+            </div>
+            <div class="footer-section support">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">API Status</a></li>
+                </ul>
+            </div>
+            <div class="footer-section company">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+            </div>
+            <div class="footer-section legal">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Claim</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div> -->
-    <div class="card">
-      <div class="header">
-        <span class="title">Beginner</span>
-        <span class="price">Free</span>
-      </div>
-      <p class="desc">Etiam ac convallis enim, eget euismod dolor.</p>
-      <ul class="lists">
-        <li class="list">
-          <img src="/images/check.png" alt="check" class="check" />
-          <span>Aenean quis</span>
-        </li>
-        <li class="list">
-          <img src="/images/check.png" alt="check" class="check" />
-          <span>Aenean quis</span>
-        </li>
-        <li class="list">
-          <img src="/images/check.png" alt="check" class="check" />
-          <span>Aenean quis</span>
-        </li>
-        <li class="list">
-          <img src="/images/check.png" alt="check" class="check" />
-          <span>Aenean quis</span>
-        </li>
-      </ul>
-      <button type="button" class="action">Get Started</button>
-    </div>
-  </body>
+        <div class="footer-bottom">
+            <p>&copy; 2020 Your Company, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
