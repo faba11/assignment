@@ -322,7 +322,7 @@ main {
  * The image container is given a background position of center to make the image centered horizontally.
  */
 .image-container {
-  background-image: url("/images/developers.jpg");
+  background-image: url("/images/community.png");
   background-position: center;
   background-size: cover;
   max-width: 100%;
