@@ -661,3 +661,14 @@ article p {
     justify-content: center;
   }
 }
+
+#hidden {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+#hidden.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
