@@ -10,7 +10,6 @@
 :root {
   --background-color: hsl(221, 41%, 7%);
   --text-color: hsl(221, 14%, 71%);
-  
 }
 body {
   font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
@@ -37,7 +36,7 @@ body {
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
-  transition: all .7s;
+  transition: all 0.7s;
 }
 
 /* #active {
@@ -63,7 +62,7 @@ body {
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-  transition: all .7s;
+  transition: all 0.7s;
 }
 
 .drop-content {
@@ -73,7 +72,6 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-
 }
 
 .drop-content a {
@@ -206,7 +204,7 @@ footer {
 }
 .social-links a:hover {
   color: black;
-  background-color: white
+  background-color: white;
 }
 .footer-bottom {
   text-align: center;
@@ -215,44 +213,22 @@ footer {
   border-top: 1px solid #1a1a2e;
   padding-top: 20px;
 }
-/* contents */
-/* nav {
-  width: auto;
-  display: grid;
-  place-items: center;
-  background-color: #333;
-  overflow: hidden;
-  padding: 0 30px;
-} */
 
-/* nav ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+/* Responsive styles for the footer section. It adjusts the layout based on screen size after feedback from tester */
+@media screen and (max-width: 668px) {
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .footer-section:last-child {
+    margin-bottom: 0;
+  }
 }
-
-nav ul li {
-  float: left;
-} */
-
-/* nav ul li a {
-  display: flex;
-  flex-wrap: wrap;
-  color: white;
-  text-align: center;
-  padding: 15px 10px;
-  margin: 0;
-  text-decoration: none;
-  border: 1px solid white;
-}
-
-nav ul li a:hover {
-  background-color: #111;
-} */
 
 /* toggle mode  styles*/
 .btn-color-mode-switch
@@ -262,7 +238,6 @@ nav ul li a:hover {
   right: auto;
   left: 20px;
 }
-
 
 .btn-color-mode-switch input[type="checkbox"]:checked ~ .alert {
   display: block;
@@ -285,7 +260,6 @@ nav ul li a:hover {
   z-index: 1;
   /* margin-right: 60px; */
 }
-
 
 .btn-container i {
   display: inline-block;

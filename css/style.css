@@ -2,52 +2,31 @@
   This code sets the padding of the body element to 120px on the left and right sides.
   This is a fairly large padding, which will make the content of the page quite narrow.
 */
-body{
+body {
   scroll-behavior: smooth;
 }
 
-
-
 #main {
   max-width: 90%;
-   margin: 0 auto;
-  overflow-x: hidden; 
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
-
-@media screen and (max-width:900px) {
+@media screen and (max-width: 900px) {
   #main {
     max-width: 100%;
-     margin: 0 20px;
+    margin: 0 20px;
   }
 }
 
-.toggle{
+.toggle {
   margin: 20px;
   display: flex;
   margin-right: 0px;
-  margin-bottom:0 ;
+  margin-bottom: 0;
   justify-content: flex-end;
   align-items: flex-end;
 }
-
-
-
-
-/* 
-  Then, we use a media query to apply different styles when the screen is smaller than 1100px.
-  In this case, we reduce the padding to 10px, which will make the content wider again.
-  This is useful for smaller screens, such as mobile devices, where the user may not have as much space to view the content.
-*/
-/* @media screen and (max-width: 1100px) {
-  body {
-    padding: 0 10px;
-  }
-}
-
-main {
-  margin: 0 auto;
-} */
 
 /* container for the welcome page */
 .welcomePage {
@@ -70,6 +49,12 @@ main {
   min-height: 560px;
   margin-top: 0;
   margin-bottom: 0;
+}
+/* this media query makes image smaller on smaller screens. It was fixed after feedback from tester */
+@media screen and (max-width: 900px) {
+  .left-welcome {
+    min-height: 460px;
+  }
 }
 
 /* right side of the welcome page */
@@ -261,14 +246,13 @@ main {
   padding: 2rem;
 }
 @media screen and (max-width: 1000px) {
-  .projects-info{
+  .projects-info {
     width: 100%;
     padding: 0;
     margin: 0;
   }
-  .info{
+  .info {
     width: 500px;
-    
   }
 }
 
@@ -363,6 +347,11 @@ main {
   transition: opacity 0.4s;
 }
 
+.headerBtn button a {
+  text-decoration: none;
+  color: var(--background-White);
+}
+
 /* The header button is given a transition to make it fade in and out smoothly when hovered over */
 .headerBtn button:hover {
   opacity: var(--opacity);
@@ -393,26 +382,6 @@ main {
   margin: 0;
   padding: 40px 0;
 }
-
-/* .header-text::before {
-  position: absolute;
-  content: "";
-  width: 90px;
-  height: 100%;
-  background-color: var(--background-orange);
-  top: 0;
-  left: 0;
-}
-
-.header-text::after {
-  position: absolute;
-  content: "";
-  width: 90px;
-  height: 100%;
-  background-color: var(--background-orange);
-  top: 0;
-  right: 0;
-} */
 
 .header-text a {
   text-decoration: none;
@@ -541,5 +510,5 @@ main {
 }
 
 .action:hover {
-  background-color: rgba(167, 139, 250, .7);
+  background-color: rgba(167, 139, 250, 0.7);
 }
