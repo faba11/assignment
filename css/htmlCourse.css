@@ -1,14 +1,9 @@
-.atv{
-    color:#188038;
+.content{
+  width: 100%;
+  height: 100vh;
 }
-.atn{
-    color: #9334e6
-}
-
-.tag{
-    color: #1967d2;
-}
-
-.pln{
-    color: #3f5561;
+.content h1{
+color: red;
+text-align: center;
+font-size: 50px;
 }

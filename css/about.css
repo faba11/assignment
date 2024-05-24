@@ -1,8 +1,3 @@
-/* form */
-body {
-  /* height: 200vh; */
-  scroll-behavior: smooth;
-}
 
 .toggle {
   margin: 20px;
@@ -12,12 +7,7 @@ body {
   align-items: flex-end;
 }
 
-:root {
-  --background-blue: hsl(200, 100%, 50%);
-  --background-black: hsl(221, 41%, 7%);
-  --background-White: white;
-  --opacity: 0.7;
-}
+
 .aboutUs {
   max-width: 11000px;
   margin: 0px auto;
@@ -42,6 +32,7 @@ body {
 .header {
   font-size: 20px;
 }
+/* animation for header */
 @keyframes animate {
   from {
     background-position: 0 0;
@@ -317,9 +308,7 @@ p i {
 }
 
 /* cantact inputs */
-#main {
-  margin: auto;
-}
+
 .form {
   margin-left: 100px;
   display: flex;
@@ -540,8 +529,10 @@ p i {
   text-transform: uppercase;
   font-size: 40px;
 }
-/* they use our services */
 
+
+
+/* review section */
 .review-h2 {
   font-size: 2rem;
   text-transform: uppercase;
@@ -591,7 +582,8 @@ p i {
   width: 300px;
   padding: 10px;
   margin: 1rem;
-  cursor: pointer;
+  /* improve from cursor pointer to none after fedback */
+  /* cursor: pointer; */
   border-radius: 10px;
   background-color: #10102a;
   border: 1px solid #10102a;
@@ -639,6 +631,7 @@ article p {
   }
 }
 
+/* responsive for mobile */
 @media screen and (max-width: 375px) {
   .reviewSection {
     padding: 0;
@@ -659,13 +652,3 @@ article p {
   }
 }
 
-/* #hidden {
-  opacity: 0;
-  transform: translate(0, 10vh);
-  transition: all 1s;
-}
-
-#hidden.visible {
-  opacity: 1;
-  transform: translate(0, 0);
-} */

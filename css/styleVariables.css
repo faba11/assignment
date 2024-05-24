@@ -42,8 +42,9 @@
   --background-White: white;
   --background-orange: hsl(16, 100%, 50%);
   --opacity: 0.7;
-  /* code style */
 
+
+  /* code style */
   --js-code-comment: #999;
   --js-code-punctuation: #ccc;
   --js-code-attr-name: #e2777a;

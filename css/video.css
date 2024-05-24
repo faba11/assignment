@@ -1,77 +1,148 @@
+/*
+ * Video CSS file
+ *
+ * This file contains the CSS styles for the video section of the website
+ *
+ * @author [Fabiola Banda](https://fabiband.com)
+ */
 body {
+  /**
+   * Sets the overflow-x to hidden to prevent scrolling horizontally
+   */
   overflow-x: hidden;
 }
 
 .toggle {
+  /**
+   * Sets the margin, display, margin-right, justify-content and align-items
+   * properties for the toggle button
+   */
   margin: 20px;
   display: flex;
   margin-right: 0px;
   justify-content: flex-end;
   align-items: flex-end;
 }
+
 :root {
+  /**
+   * Defines a custom color variable named --color
+   */
   --color: hsl(221, 14%, 71%);
 }
+
 main {
+  /**
+   * Sets the maximum width, margin and padding for the main section
+   */
   max-width: 100%;
   margin: 0;
   padding: 0 400px;
+  /**
+   * Sets the overflow-x to hidden to prevent scrolling horizontally
+   */
   overflow-x: hidden;
+  /**
+   * Centers the content of the main section vertically and horizontally
+   */
   display: grid;
   place-content: center;
 }
 
 header {
+  /**
+   * Sets the background color and margin for the header
+   */
   background-color: var(--background-orange);
   margin: 0 10px;
 }
 header h1 {
+  /**
+   * Sets the text alignment and color for the header h1 element
+   */
   text-align: center;
   color: var(--color);
+  padding: 40px;
 }
 @media screen and (max-width: 1300px) {
+  /**
+   * Adjusts the padding and margin for the main section on smaller screens
+   */
   main {
     padding: 10px 20px;
     margin: 20px 0;
   }
 }
 .video-card {
+  /**
+   * Sets the width, display, justify-content, align-items, flex-wrap and gap
+   * properties for the video card container
+   */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  /**
+   * Sets the border radius and border color for the video card container
+   */
   border-radius: 20px;
   border: 2px solid var(--background-orange);
+  /**
+   * Sets the margin and padding for the video card container
+   */
   margin: 30px 0;
   padding: 10px 0;
 }
 .video {
+  /**
+   * Sets the position, width, height, border, border-radius and overflow
+   * properties for the video
+   */
   position: relative;
   width: 300px;
   height: 300px;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
+  /**
+   * Sets the background color and color for the video
+   */
   background-color: #f9f9f9;
   color: black;
+  /**
+   * Sets the padding and display properties for the video
+   */
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .video iframe {
+  /**
+   * Sets the width and height properties for the video iframe
+   */
   width: 100%;
   height: auto;
+  /**
+   * Sets the border radius for the video iframe
+   */
   border-radius: 8px;
 }
 .video span {
+  /**
+   * Sets the display, font weight and font size properties for the video span
+   */
   display: block;
   font-weight: bold;
   font-size: 16px;
 }
 .video p {
+  /**
+   * Sets the margin and font size properties for the video p element
+   */
   margin: 10px 0 0 0;
   font-size: 14px;
 }
+

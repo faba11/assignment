@@ -289,22 +289,6 @@ body {
   object-fit: cover;
 }
 /* image container */
-/* 
- * The following CSS code block is responsible for styling the image container, the header button, and the header text.
- * It uses absolute positioning to place the header button on top of the image, and relative positioning to place the header text on top of the image.
- * The image container is given a max-width of 100% and is centered horizontally with margin: 100px auto 0;
- * The header button is positioned absolutely on top of the image, with its top edge 45% from the bottom of the image.
- * The header button is given a width of 100% and is centered horizontally with text-align: center;
- * The header button is also given a padding of 20px to make it easier to click.
- * The header button is given a background color of var(--background) and a text color of var(--color) to make it match the theme of the website.
- * The header button is given a transition of opacity 0.4s to make it fade in and out smoothly when hovered over.
- * The header text is given a padding of 0 400px to make it centered horizontally.
- * The header text is also given a margin of 20px 0 to make it centered vertically.
- * The header text is given a text-align of justify to make it centered horizontally.
- * The image container is given a height of 350px to make it fit with the image.
- * The image container is also given a background size of cover to make the image cover the entire container.
- * The image container is given a background position of center to make the image centered horizontally.
- */
 .image-container {
   background-image: url("/images/community.png");
   background-position: center;
@@ -371,7 +355,7 @@ body {
   }
 }
 
-/* auto typing */
+/* auto typing container */
 .auto-typing {
   margin: 90px 0;
 }
@@ -389,7 +373,7 @@ body {
   color: var(--background-White);
 }
 
-/* CARD */
+/* CARD  and content */
 .course-container {
   margin: 30px auto;
 }
@@ -430,9 +414,9 @@ body {
   padding: 1.5rem;
 }
 
+/* For screens smaller than 800px */
 @media screen and (max-width: 800px) {
   .course .card {
-    /* margin: 2px; */
     width: 450px;
   }
 }
