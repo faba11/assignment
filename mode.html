@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light/Dark Mode Toggle</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode Default */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode #icon {
+  color: #f39c12; /* Sun color */
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+body.dark-mode #icon {
+  color: #f1c40f; /* Moon color */
+}
+
+/* Toggle Button Styles */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 3rem;
+  color: inherit;
+  transition: transform 0.3s;
+}
+
+#theme-toggle:focus {
+  outline: none;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
+</style>
+
+
+</head>
+<body class="light-mode">
+  <div class="toggle-container">
+    <button id="theme-toggle" aria-label="Toggle Theme">
+      <!-- Sun Icon (default) -->
+      <span id="icon" class="sun">&#9728;</span>
+    </button>
+  </div>
+
+
+
+<script>
+    // Select the toggle button and body
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+const icon = document.getElementById('icon');
+
+// Theme Toggle Functionality
+themeToggle.addEventListener('click', () => {
+  // Toggle the dark-mode and light-mode classes
+  body.classList.toggle('dark-mode');
+  body.classList.toggle('light-mode');
+  
+  // Toggle the icon between Sun and Moon
+  if (body.classList.contains('dark-mode')) {
+    icon.innerHTML = '&#9790;'; // Moon icon
+  } else {
+    icon.innerHTML = '&#9728;'; // Sun icon
+  }
+});
+  </script>
+</body>
+</html>

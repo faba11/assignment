@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (colorModeInput.checked) {
       document.documentElement.style.setProperty(
         "--background-color",
-        "hsl(0, 0%, 100%)"
+        "hsl(0, 15.20%, 93.50%)"
       );
       document.documentElement.style.setProperty(
         "--text-color",
